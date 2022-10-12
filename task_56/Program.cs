@@ -14,23 +14,18 @@ int[,] FillAndPrintTwoDimArray(int rowsNumbers, int columnNumbers)
     int[,] myArray = new int[rowsNumbers, columnNumbers];
     for (int i = 0; i < myArray.GetLength(0); i++)
     {
-
         for (int j = 0; j < myArray.GetLength(1); j++)
         {
             myArray[i, j] = new Random().Next(1, 10);
             Console.Write($"{myArray[i, j]}  ");
-
         }
         Console.WriteLine();
     }
     return myArray;
 }
 
-
-
 int[] SumArray(int[,] array)
 {
-
     int i = 0;
     int index = 0;
     int[] sumArray = new int[array.GetLength(0)];
@@ -40,14 +35,11 @@ int[] SumArray(int[,] array)
         for (int j = 0; j < array.GetLength(1); j++)
         {
             sum = sum + array[i, j];
-
         }
-        sumArray[index] = sum;
-        // Console.Write($"{sumArray[index]} ");  
+        sumArray[index] = sum; 
         i++;
         index++;
     }
-
     return sumArray;
 }
 
@@ -62,16 +54,15 @@ void SearchMinSumInString(int[] array)
         {
             minSum = array[i];
         }
-
     }
     i = 0;
     int index = 0;
     for (i = 0; i < array.Length; i++)
     {
         if (array[i] == minSum)
-         index = i;
+            index = i;
     }
-    Console.WriteLine($"В(o) {index+1} строке наименьшая сумма элементов.");
+    Console.WriteLine($"В(o) {index + 1} строке наименьшая сумма элементов.");
 }
 
 int rowsNumbers = new Random().Next(3, 5);

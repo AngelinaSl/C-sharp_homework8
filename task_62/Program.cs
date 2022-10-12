@@ -12,20 +12,16 @@ void FillArray(int[] myArray)
     int length = myArray.Length;
     int index = 0;
     int number = 1;
-
     while (index < length)
     {
         myArray[index] = number;
         index++;
         number++;
     }
-
 }
 
 int FillArrayRight(int[,] array, int i, int k, int[] numbersArray)
 {
-
-
     for (int j = 0; j < array.GetLength(1); j++)
     {
         if (array[i, j] == 0)
@@ -60,7 +56,6 @@ int FillArrayLeft(int[,] array, int i, int k, int[] numbersArray)
             k++;
         }
     }
-
     return k;
 }
 
@@ -74,7 +69,6 @@ int FillArrayUp(int[,] array, int j, int k, int[] numbersArray)
             k++;
         }
     }
-
     return k;
 }
 
@@ -86,7 +80,6 @@ void FillArraySpiral(int[,] array, int[] numbersArray, int size)
     int i = 0;
     int j = 0;
     int k = 0;
-
     while (numbersArray[k] <= size * size)
     {
         if (array[i, j] == 0)
@@ -123,8 +116,7 @@ void PrintNewArray(int[,] array)
             else
             {
                 Console.Write($"0{array[i, j]}  ");
-            }
-           
+            }        
         } 
         Console.WriteLine();
     }

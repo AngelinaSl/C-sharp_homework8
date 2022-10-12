@@ -15,12 +15,10 @@ int[,] FillAndPrintTwoDimArray(int rowsNumbers, int columnNumbers)
     int[,] myArray = new int[rowsNumbers, columnNumbers];
     for (int i = 0; i < myArray.GetLength(0); i++)
     {
-
         for (int j = 0; j < myArray.GetLength(1); j++)
         {
             myArray[i, j] = new Random().Next(1, 10);
             Console.Write($"{myArray[i, j]}  ");
-
         }
         Console.WriteLine();
     }
@@ -34,25 +32,20 @@ void RegulateArray(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            for (int r = 0; r < array.GetLength(1) - 1; r++)
+            for (int k = 0; k < array.GetLength(1) - 1; k++)
             {
-
-                if (array[i, r] < array[i, r + 1])
+                if (array[i, k] < array[i, k + 1])
                 {
-                    help = array[i, r + 1];
-                    array[i, r + 1] = array[i, r];
-                    array[i, r] = help;
-
+                    help = array[i, k + 1];
+                    array[i, k + 1] = array[i, k];
+                    array[i, k] = help;
                 }
-               
             }
-
         }
     }
-
 }
 
-void PrintNewMatrix(int[,] array)
+void PrintNewArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -69,4 +62,4 @@ int columnNumbers = new Random().Next(3, 5);
 int[,] array = FillAndPrintTwoDimArray(rowsNumbers, columnNumbers);
 RegulateArray(array);
 Console.WriteLine();
-PrintNewMatrix(array);
+PrintNewArray(array);
