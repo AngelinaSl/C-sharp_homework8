@@ -73,6 +73,7 @@ int FillArrayUp(int[,] array, int j, int k, int[] numbersArray)
 }
 
 
+// void FillArraySpiral(int[,] array, int[] numbersArray, int size1, int size2)
 void FillArraySpiral(int[,] array, int[] numbersArray, int size)
 {
     int number = 0;
@@ -81,6 +82,7 @@ void FillArraySpiral(int[,] array, int[] numbersArray, int size)
     int j = 0;
     int k = 0;
     while (numbersArray[k] <= size * size)
+    // while (numbersArray[k] <= size1 * size2)
     {
         if (array[i, j] == 0)
         {
@@ -125,7 +127,11 @@ void PrintNewArray(int[,] array)
     int[] numbersArray = new int[100];
     FillArray(numbersArray);
     int size = 4;
+    // int size1 = new Random().Next(3, 10);
+    // int size2 = new Random().Next(3, 10);
     int[,] myArray = new int[size, size];
+    // int[,] myArray = new int[size1, size2];
     FillArraySpiral(myArray, numbersArray, size);
+    // FillArraySpiral(myArray, numbersArray, size1, size2);
     PrintNewArray(myArray);
 
